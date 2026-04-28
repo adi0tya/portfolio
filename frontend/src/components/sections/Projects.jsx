@@ -214,7 +214,7 @@ export default function Projects() {
         </div>
 
         {/* All projects — both use the same FeaturedCard layout */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '28px', paddingBottom: '16px' }}>
           {projects.map((p, i) => (
             <FeaturedCard key={p.id} project={p} inView={inView} index={i} />
           ))}
