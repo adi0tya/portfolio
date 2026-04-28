@@ -89,7 +89,7 @@ function FeaturedCard({ project, inView, index }) {
       {/* Ambient glow */}
       <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '280px', height: '280px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,162,39,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
-      <div style={{ padding: '28px 32px' }}>
+      <div style={{ padding: 'clamp(16px, 4vw, 28px) clamp(16px, 4vw, 32px)' }}>
         <div className="grid grid-cols-1 lg:grid-cols-5" style={{ gap: '28px' }}>
           {/* Left */}
           <div className="lg:col-span-3">
@@ -190,7 +190,7 @@ export default function Projects() {
   }, [])
 
   return (
-    <section id="projects" className="relative py-24 px-6" ref={ref}>
+    <section id="projects" className="relative py-24 px-4" ref={ref}>
       <div className="absolute inset-0 pointer-events-none" style={{
         background: 'radial-gradient(ellipse 70% 50% at 50% 50%, rgba(201,162,39,0.03) 0%, transparent 70%)',
       }} />

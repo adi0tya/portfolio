@@ -58,7 +58,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="about" className="relative py-28 px-6" ref={ref}>
+    <section id="about" className="relative py-28 px-4" ref={ref}>
       <div className="absolute inset-0 pointer-events-none" style={{
         background: 'radial-gradient(ellipse 55% 45% at 75% 50%, rgba(201,162,39,0.04) 0%, transparent 70%)',
       }} />
@@ -182,7 +182,7 @@ export default function About() {
                     @ {education.institution}
                   </p>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.78rem' }}>
-                    {education.location} · 2024 — Expected {education.expected}
+                    {education.location} · Graduation: {education.expected}
                   </p>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-3">
               <StatCard value="2nd"  sub="Year · BCA Program"       custom={2}   inView={inView} />
-              <StatCard value="'27"  sub="Expected Graduation"       custom={2.3} inView={inView} />
+              <StatCard value="'27"  sub="Graduation: 2027"           custom={2.3} inView={inView} />
               <StatCard value="15+"  sub="Languages & Tools"         custom={2.6} inView={inView} />
               <StatCard value="MERN" sub="Primary Stack"             custom={2.9} inView={inView} />
             </div>

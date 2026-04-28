@@ -118,7 +118,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-28 px-6" ref={ref}>
+    <section id="contact" className="relative py-28 px-4" ref={ref}>
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none" style={{
         background: 'radial-gradient(ellipse 55% 50% at 50% 90%, rgba(201,162,39,0.05) 0%, transparent 70%)',

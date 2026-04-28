@@ -3,7 +3,6 @@ import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
-import Resume from './components/sections/Resume'
 import Contact from './components/sections/Contact'
 import Footer from './components/ui/Footer'
 import ShardTransition from './components/ui/ShardTransition'
@@ -23,7 +22,7 @@ const Divider = ({ gold }) => (
 
 export default function App() {
   return (
-    <div style={{ background: 'var(--bg-void)', minHeight: '100svh' }}>
+    <div style={{ background: 'var(--bg-void)', minHeight: '100svh', overflowX: 'hidden' }}>
       <div className="noise-overlay" aria-hidden="true" />
       <Navbar />
       <main>
@@ -35,8 +34,6 @@ export default function App() {
         <ShardTransition id="shard-2" />
         <Projects />
         <Divider gold />
-        <Resume />
-        <ShardTransition id="shard-3" />
         <Contact />
       </main>
       <Footer />

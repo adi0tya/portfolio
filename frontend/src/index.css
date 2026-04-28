@@ -223,7 +223,10 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ── Smooth section transitions ── */
-section { position: relative; }
+section {
+  position: relative;
+  overflow-x: hidden;
+}
 
 /* ── Focus ring for accessibility ── */
 button:focus-visible, a:focus-visible {
@@ -234,8 +237,12 @@ button:focus-visible, a:focus-visible {
 
 /* ── Responsive padding tightening ── */
 @media (max-width: 640px) {
-  .section-container { padding: 0 16px; }
-  .btn-primary, .btn-secondary { padding: 10px 20px; font-size: 12px; }
+  .section-container { padding: 0 14px; }
+  .btn-primary, .btn-secondary {
+    padding: 10px 18px;
+    font-size: 12px;
+    min-height: 44px;
+  }
 }
 
 /* ── Skills grid responsive breakpoints ── */
@@ -253,16 +260,34 @@ button:focus-visible, a:focus-visible {
   }
 }
 
-/* ── Section spacing — ensure clear gap between About focus tags and Skills ── */
-#about {
-  padding-bottom: 80px;
+/* ── Section spacing ── */
+#about  { padding-bottom: 60px; }
+#skills { padding-top: 60px; }
+
+/* ── Mobile section padding reduction ── */
+@media (max-width: 640px) {
+  #about, #skills, #projects, #contact {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
-#skills {
-  padding-top: 80px;
+
+/* ── Prevent wide elements from overflowing ── */
+img, svg, canvas, video {
+  max-width: 100%;
 }
 
 /* ── Shard transition zone ── */
 .shard-zone {
   position: relative;
   z-index: 5;
+}
+
+/* ── Mobile tap targets ── */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 40px;
+  }
 }

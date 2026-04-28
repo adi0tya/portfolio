@@ -315,10 +315,10 @@ function Scene({ mouse }) {
       <pointLight position={[0, -8, -5]} intensity={0.4} color="#c9a84c" distance={10} decay={2} />
 
       {/* Stars */}
-      <Stars radius={90} depth={60} count={1500} factor={2.5} saturation={0} fade speed={0.4} />
+      <Stars radius={90} depth={60} count={800} factor={2.5} saturation={0} fade speed={0.4} />
 
       {/* Gold sparkles */}
-      <Sparkles count={60} scale={[18, 8, 12]} size={1.5} speed={0.25} opacity={0.6} color="#c9a84c" />
+      <Sparkles count={40} scale={[18, 8, 12]} size={1.5} speed={0.25} opacity={0.6} color="#c9a84c" />
 
       {/* Scene geometry */}
       <Skyline />
@@ -327,7 +327,7 @@ function Scene({ mouse }) {
       <WingGeometry side={1} />
       <WingGeometry side={-1} />
       <Shards />
-      <Dust count={350} />
+      <Dust count={200} />
       <Mist />
 
       {/* Searchlights */}
@@ -357,7 +357,7 @@ export default function GothamScene({ mouse }) {
         toneMappingExposure: 1.1,
       }}
       shadows={false}
-      dpr={[1, 1.5]}
+      dpr={[1, 1]}
       style={{ background: '#050507' }}
     >
       <Scene mouse={mouse} />
